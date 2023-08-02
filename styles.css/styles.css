@@ -47,9 +47,10 @@ hr.line {
   width: 1600px;
   height: 1px;
   color: #ececec;
+  padding-bottom: 94px;
 }
 
-.global-header a.navigation-menu:hover,
+.global-header .studio:hover, .portofolio:hover, .contact-nav:hover,
 .global-header a.header-contact:hover {
   color: var(--link-active-color);
 }
@@ -84,7 +85,7 @@ span.logo {
   color: #2196f3;
 }
 
-.global-header ul {
+.global-header .navigation-menu {
   list-style: none;
   padding: 0px;
 }
@@ -92,7 +93,7 @@ header li {
   display: inline-block;
   padding: 0px 25px;
 }
-.global-header a.navigation-menu {
+nav.navbar  a {
   color: #212121;
   font-size: 14px;
   font-style: normal;
@@ -132,6 +133,24 @@ header svg.icon-smartphone {
   flex-shrink: 0;
   margin-right: 10px;
 }
+.navigation-menu a {
+  position: relative;
+  padding-bottom: 32px;
+}
+.navbar .portofolio {
+  color: var(--link-active-color);
+}
+ .portofolio::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  background: var(--link-active-color);
+  bottom: 0;
+  display: flex;
+}
 .main-section {
   display: flex;
   justify-content: center;
@@ -155,7 +174,6 @@ header svg.icon-smartphone {
   background: #f5f4fa;
   border: none;
   border-radius: 4px;
-  padding-top: 94px;
 }
 .main-section a.button {
   font-weight: 700;
